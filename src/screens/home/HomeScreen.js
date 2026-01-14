@@ -12,20 +12,7 @@ const MOCK_MODULES = [
 
 export default function HomeScreen({ navigation }) {
 
-    const handleLogout = async () => {
-        const { error } = await supabase.auth.signOut();
-        if (error) Alert.alert('Error', error.message);
-    };
-
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            headerRight: () => (
-                <TouchableOpacity onPress={handleLogout} style={{ marginRight: 10 }}>
-                    <Text style={{ color: colors.white, fontWeight: 'bold' }}>Logout</Text>
-                </TouchableOpacity>
-            )
-        });
-    }, [navigation]);
+    // Logout is now handled in ProfileScreen
 
     const renderModule = ({ item }) => (
         <TouchableOpacity
