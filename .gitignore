@@ -31,7 +31,13 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+
+# backups
+*_backup/
+*.old
+*.bak
 
 # typescript
 *.tsbuildinfo
